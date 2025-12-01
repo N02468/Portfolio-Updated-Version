@@ -17,7 +17,7 @@ function ContactForm() {
     e.preventDefault();
     try {
       // ⚠️ Change URL after deploy: don't keep localhost in production
-      const response = await axios.post(' http://localhost:5000/api/contact', formData);
+      const response = await axios.post(' https://portfolio-updated-version-5.onrender.com/api/contact', formData);
       toast.success(response.data.message || 'Message sent successfully!');
       setFormData({ name: '', email: '', message: '' }); // clear form
     } catch (error) {
